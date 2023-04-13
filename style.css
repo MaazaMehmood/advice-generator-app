@@ -1,0 +1,101 @@
+/* @import 'https://fonts.google.com/specimen/Manrope'; */
+
+.attribution {
+     font-size: 12px; text-align: center; color: white; position: absolute;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:  hsl(218, 23%, 16%);
+    font-family: 'Manrope';
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    padding: 2.5rem;
+    width: 500px;
+    height: 40vh;
+    background: hsl(217, 19%, 24%);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#n0 {
+    display: inline;
+}
+
+#advice-id , .advice .sep, .dice{
+    padding: 2px;
+}
+
+.advice {
+    margin-bottom: 20px;
+}
+
+#advice-id p {
+    font-size: 14px;
+    letter-spacing: 3px;
+    padding: 25px;
+    color: hsl(192, 100%, 66%);
+}
+
+.advice p {
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.sep {
+    margin: 10px 0;
+}
+
+.dice{
+    position: static;
+    background:hsl(189, 98%, 48%);
+    border-radius: 50rem;
+    align-items: center;
+    text-align: center;
+    padding: 17px;
+    margin-top: 20px;
+}
+
+.dice:hover {
+    box-shadow: 3px 3px 50px hsl(199, 100%, 66%);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:600px) {
+    .container{
+        width: 80%;
+    }
+    
+}
