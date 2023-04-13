@@ -13,7 +13,8 @@ async function adviceJSON() {
     const txt = await response.json();
     return txt;
 }
-  
+
+//data rendering
 adviceJSON().then(
 resp => {
     console.log(resp);
