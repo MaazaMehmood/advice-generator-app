@@ -1,9 +1,5 @@
 /* @import 'https://fonts.google.com/specimen/Manrope'; */
 
-.attribution {
-     font-size: 12px; text-align: center; color: white; position: absolute;}
-.attribution a { color: hsl(228, 45%, 44%); }
-
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +11,7 @@ body {
     font-family: 'Manrope';
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     padding: 50px;
@@ -31,7 +27,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0; */
-    padding: 2.5rem;
+    padding: 2rem;
     width: 500px;
     height: 40vh;
     background: hsl(217, 19%, 24%);
@@ -39,34 +35,45 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    box-shadow: 10px 3px 50px hsla(256, 41%, 16%, 0.589);
+
 }
 
 #n0 {
     display: inline;
 }
 
-#advice-id , .advice .sep, .dice{
-    padding: 2px;
-}
-
-.advice {
-    margin-bottom: 20px;
+#advice-id {
+    position: absolute;
+    margin-bottom: 30%;
 }
 
 #advice-id p {
+    position: relative;
+    text-align: center;
     font-size: 14px;
     letter-spacing: 3px;
-    padding: 25px;
-    color: hsl(192, 100%, 66%);
+    padding: 10px;
+    color: hsl(184, 100%, 66%);
+}
+
+.advice {
+    position: absolute;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .advice p {
-    height: 50px;
+    position: relative;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: light;
     letter-spacing: 1px;
     padding: 10px;
     color: white;
@@ -74,28 +81,57 @@ body {
 }
 
 .sep {
-    margin: 10px 0;
+    position: absolute;
+    margin-bottom: -33%;
 }
 
 .dice{
-    position: static;
-    background:hsl(189, 98%, 48%);
+    position: absolute;
+    background:hsl(184, 100%, 66%);
     border-radius: 50rem;
     align-items: center;
     text-align: center;
     padding: 17px;
-    margin-top: 20px;
+    margin-top: 53%;
 }
 
 .dice:hover {
-    box-shadow: 3px 3px 50px hsl(199, 100%, 66%);
+    box-shadow: 3px 3px 50px hsla(184, 100%, 66%, 0.726);
     cursor: pointer;
+    transition: .3s ease-out;
 }
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:545px) {
     .container{
         width: 80%;
+        height: 55vh;
+        padding: 5px;
+    }
+    #advice-id {
+        margin-top: -20%;
+    }
+    .sep {
+        margin-top: 18%;
+    }
+    .dice{
+        margin-top: 83%;
     }
     
 }
+
+@media screen and (max-width:400px) {
+    #advice-id {
+        margin-top: -30%;
+    }
+    .sep {
+       display: none;
+    }
+    .dice{
+        margin-top: 90%;
+    }
+}
+
+.attribution {
+    font-size: 12px; text-align: center; color: white; position: relative;}
+.attribution a { color: hsl(228, 45%, 44%); }
